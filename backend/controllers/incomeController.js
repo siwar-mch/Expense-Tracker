@@ -26,7 +26,6 @@ exports.getIncome = async (req, res) => {
   }
 };
 
-// DELETE income ✅
 exports.deleteIncome = async (req, res) => {
   try {
     const income = await Income.findOne({ _id: req.params.id, user: req.user.id });
