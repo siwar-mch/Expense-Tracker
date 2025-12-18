@@ -34,11 +34,16 @@ A **full-stack web application** to manage personal incomes and expenses, track 
 
 ## API Endpoints
 
-| Method | Endpoint           | Description                       | Auth Required |
-|--------|------------------|-----------------------------------|---------------|
-| GET    | /api/expenses     | Get all expenses for the user     | Yes           |
-| POST   | /api/expenses     | Add a new expense                 | Yes           |
-| DELETE | /api/expenses/:id | Delete an expense (owner only)    | Yes           |
+| Method | Endpoint            | Description                       | Auth Required |
+|--------|-------------------|-----------------------------------|---------------|
+| GET    | /api/expenses      | Get all expenses for the user      | Yes           |
+| POST   | /api/expenses      | Add a new expense                  | Yes           |
+| DELETE | /api/expenses/:id  | Delete an expense (owner only)     | Yes           |
+| GET    | /api/incomes       | Get all incomes for the user       | Yes           |
+| POST   | /api/incomes       | Add a new income                   | Yes           |
+| DELETE | /api/incomes/:id   | Delete an income (owner only)      | Yes           |
+| POST   | /api/auth/register | Create a new user                  | No            |
+| POST   | /api/auth/login    | Login and get JWT                  | No            |
 
 ---
 
@@ -58,6 +63,7 @@ axios.get("http://localhost:5000/api/expenses", {
 });
 ```
 ## Project Structure
+```pgsql
 expense-tracker/
 ├─ backend/
 │  ├─ controllers/
@@ -91,3 +97,4 @@ expense-tracker/
 │  │  └─ App.js
 │  └─ package.json
 └─ README.md
+```
