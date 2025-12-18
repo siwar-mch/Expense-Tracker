@@ -78,7 +78,6 @@ export default function AddExpense() {
             onChange={(e) => setDate(e.target.value)}
             required
           />
-
           <button type="submit">Add Expense</button>
         </form>
       </div>
