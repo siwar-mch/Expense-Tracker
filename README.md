@@ -1,4 +1,3 @@
-"# Expense-Tracker" 
 # Expense Tracker
 
 A **full-stack web application** to manage personal incomes and expenses, track spending trends, and visualize monthly expenses. Built with **React** for the frontend and **Node.js/Express + MongoDB** for the backend.  
@@ -57,23 +56,38 @@ A **full-stack web application** to manage personal incomes and expenses, track 
 axios.get("http://localhost:5000/api/expenses", {
   headers: { Authorization: `Bearer ${token}` }
 });
+```
+## Project Structure
 expense-tracker/
 ├─ backend/
 │  ├─ controllers/
+│  │  └─ authController.js
 │  │  └─ expenseController.js
-│  ├─ models/
-│  │  └─ Expense.js
-│  ├─ routes/
-│  │  └─ expenseRoute.js
+│  │  └─ incomeController.js
 │  ├─ middleware/
 │  │  └─ auth.js
+│  ├─ models/
+│  │  └─ Expense.js
+│  │  └─ Income.js
+│  │  └─ User.js
+│  ├─ routes/
+│  │  └─ authRoute.js
+│  │  └─ expenseRoute.js
+│  │  └─ incomeRoute.js
 │  └─ server.js
 ├─ frontend/
 │  ├─ src/
-│  │  ├─ pages/
-│  │  │  └─ ExpensesList.jsx
 │  │  ├─ components/
+│  │  │  └─ Navbar.css
 │  │  │  └─ Navbar.jsx
+│  │  ├─ pages/
+│  │  │  └─ AddExpense.jsx
+│  │  │  └─ AddIncome.jsx
+│  │  │  └─ Dashboard.jsx
+│  │  │  └─ ExpensesList.jsx
+│  │  │  └─ IncomeList.jsx
+│  │  │  └─ Login.jsx
+│  │  │  └─ Signup.jsx
 │  │  └─ App.js
 │  └─ package.json
 └─ README.md
